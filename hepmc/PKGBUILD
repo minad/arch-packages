@@ -1,0 +1,22 @@
+# $Id$
+# Maintainer: Daniel Mendler <mail at daniel-mendler.de>
+# Contributor: Daniel Mendler <mail at daniel-mendler.de>
+pkgname=hepmc
+pkgver=2.06.04
+pkgrel=1
+pkgdesc="Event records for High Energy Physics Monte Carlo Generators"
+arch=(i686 x86_64)
+url="https://savannah.cern.ch/projects/hepmc/"
+license=('GPL')
+depends=(gcc-libs)
+source=(http://lcgapp.cern.ch/project/simu/HepMC/download/HepMC-$pkgver.tar.gz)
+sha256sums=('207b0ae1c5e2b1666d1e5b36335475f41296450bee6a31d11058d942aef025d8')
+
+build() {
+  cd $srcdir/HepMC-$pkgver
+  ./configure --prefix=/usr --with-momentum=GEV --with-length=MM
+  make
+  make prefix=$pkgdir/usr install
+  find $pkgdir -name '*.la' -exec rm {} \;
+}
+
