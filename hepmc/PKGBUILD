@@ -17,6 +17,5 @@ build() {
   ./configure --prefix=/usr --with-momentum=GEV --with-length=MM
   make
   make prefix=$pkgdir/usr install
-  find $pkgdir -name '*.la' -exec rm {} \;
 }
 
