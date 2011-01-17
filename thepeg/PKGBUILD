@@ -18,5 +18,6 @@ build() {
   make
   make prefix=$pkgdir/usr install
   find $pkgdir -name '*.la' -exec rm {} \;
+  rm $pkgdir/usr/lib/ThePEG/Makefile* $pkgdir/usr/lib/ThePEG/libtool
 }
 
