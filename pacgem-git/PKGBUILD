@@ -1,8 +1,8 @@
 # Maintainer: Daniel Mendler <mail at daniel-mendler.de>
 # Contributor: Daniel Mendler <mail at daniel-mendler.de>
 pkgname=pacgem-git
-pkgver=20110208
-pkgrel=2
+pkgver=20110210
+pkgrel=1
 pkgdesc="Install Ruby Gems as Arch Linux packages"
 arch=('any')
 url="http://github.com/minad/pacgem"
