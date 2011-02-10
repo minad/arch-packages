@@ -1,9 +1,8 @@
-# $Id$
 # Maintainer: Daniel Mendler <mail at daniel-mendler.de>
 # Contributor: Daniel Mendler <mail at daniel-mendler.de>
 pkgname=hepmc
 pkgver=2.06.04
-pkgrel=1
+pkgrel=2
 pkgdesc="Event records for High Energy Physics Monte Carlo Generators"
 arch=(i686 x86_64)
 url="https://savannah.cern.ch/projects/hepmc/"
@@ -16,6 +15,8 @@ build() {
   cd $srcdir/HepMC-$pkgver
   ./configure --prefix=/usr --with-momentum=GEV --with-length=MM
   make
-  make prefix=$pkgdir/usr install
 }
 
+package() {
+  make prefix=$pkgdir/usr install
+}
