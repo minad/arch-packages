@@ -27,7 +27,7 @@ build() {
   msg 'GIT checkout done or server timeout'
 
   cd cpm
-  ./configure --prefix=/usr --with-cracklib-dict=/usr/share/cracklib/pw_dict.pwd
+  ./configure --prefix=/usr --with-cracklib-dict=/usr/share/cracklib/pw_dict
   make
 }
 
